@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  text-rendering: optimizeLegibility;
+  background-color: rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#header,
+#pricing,
+#business {
+  background-color: rgb(1, 19, 54);
+}
+
+#header h3,
+#header li,
+#header p,
+#header button {
+  z-index: 4;
+}
+
+#header .list-side li:hover {
+  transition: all 0.3s ease-in-out;
+  color: rgb(44, 111, 238);
+  cursor: pointer;
+}
+
+.is-side-active {
+  position: relative;
+}
+
+.is-side-active::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: rgb(44, 111, 238);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+}
+
+.is-active,
+.is-side-active {
+  color: rgb(44, 111, 238) !important;
+}
+
+.banner,
+.banner-audience,
+.banner-business {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.banner::before,
+.banner-audience::before {
+  content: "";
+  background: url("https://superprops-next.vercel.app/_next/static/image/src/common/assets/image/webAppMinimal/banner-pattern-1.124c783398e8afbaf0e3aa5ae4ce4bc3.png")
+    no-repeat;
+  width: 674px;
+  top: 0;
+  height: 811px;
+  position: absolute;
+  background-size: 55%;
+}
+
+.banner-audience::before {
+  background-size: 50%;
+  height: 620px;
+}
+
+.banner::after {
+  content: "";
+  background: url("https://superprops-next.vercel.app/_next/static/image/src/common/assets/image/webAppMinimal/banner-pattern-2.716e5ac0f7d030b796236ce852547e16.png")
+    no-repeat;
+  background-position: right 0px;
+  top: 200px;
+  width: 444px;
+  height: 654px;
+  right: 0;
+  position: absolute;
+  background-size: 60%;
+  z-index: 0;
+}
+
+.banner-business::before {
+  background: url("https://superprops-next.vercel.app/_next/static/image/src/common/assets/image/webAppMinimal/cta-pattern-1.064aaa38bb1e96d6dc3bf2b122eb7c30.png")
+    left bottom / 20% no-repeat;
+  bottom: 0px;
+  left: 0px;
+  width: 384px;
+  height: 365px;
+  content: "";
+  position: absolute;
+  background-size: 50%;
+}
+
+.banner-business::after {
+  content: "";
+  background: url("https://superprops-next.vercel.app/_next/static/image/src/common/assets/image/webAppMinimal/cta-pattern-2.0116c00dd74147ffdfe8af3644369c46.png")
+    right bottom / 23% no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 402px;
+  height: 481px;
+  background-size: 50%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .banner::before {
+    background-size: 30%;
+  }
+  .banner::after {
+    background-size: 30%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .decoration::after,
+  .decoration::before,
+  .banner-audience,
+  .banner::after,
+  .banner::before,
+  .banner-business::after,
+  .banner-business::before {
+    display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+.mask {
+  opacity: 0.3;
+  height: 100%;
+  background-color: #000;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.explore-more:hover .explore-more-but {
+  transition: all 0.4s ease-in-out;
+  right: 15px !important;
+}
+
+.include:hover {
+  color: rgb(60, 116, 255);
+  background-color: inherit !important;
+}
+
+.include:hover .include-but {
+  transition: all 0.4s ease-in-out;
+  right: -24px !important;
+}
+
+.decoration::before {
+  background: url("https://superprops-next.vercel.app/_next/static/image/src/common/assets/image/webAppMinimal/pattern1.61f3dafcf892d0756992502ab2516eb9.png")
+    no-repeat transparent;
+  width: 223px;
+  height: 202px;
+  left: 0px;
+  top: -5px;
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+
+.decoration::after {
+  content: "";
+  position: absolute;
+  height: 223px;
+  width: 202px;
+  right: -24px;
+  bottom: -35px;
+  z-index: 1;
+  background: url("https://superprops-next.vercel.app/_next/static/image/src/common/assets/image/webAppMinimal/pattern2.7482b15387accbd480c50563ccb14b1c.png")
+    no-repeat transparent;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 13% !important;
+}
+
+.MuiTouchRipple-root,
+.MuiSwitch-thumb {
+  color: #fff !important;
+}
+
+.css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked
+  + .MuiSwitch-track,
+.css-1yjjitx-MuiSwitch-track {
+  background-color: rgb(63, 219, 177) !important;
+}
+
+#footer li{
+  color: rgba(9, 19, 31, 0.7);
+  font-size: 15px;
+  margin-bottom: 9px;
+  cursor: pointer;
+}
+
+#footer li:hover{
+  transition: all .4s ease-in-out;
+  color: rgb(60, 116, 255);
+}
