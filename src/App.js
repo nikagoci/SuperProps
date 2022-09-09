@@ -3,7 +3,9 @@ import AllPage from './components/AllPage';
 
 function App() {
   return (
+    <>
     <AllPage />
+    </>
   );
 }
 
